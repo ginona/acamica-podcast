@@ -361,7 +361,6 @@ footer .crIcons .social-media a {
   -webkit-transform: skewY(-6deg);
           transform: skewY(-6deg);
   padding-bottom: 25%;
-  z-index: -1;
 }
 
 .btnContainer {
