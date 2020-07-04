@@ -1,0 +1,791 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.header {
+  background-color: #ffffff;
+  -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #0000EC;
+}
+
+.header ul li a {
+  color: #ffffff;
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header ul li a:hover {
+  color: #00F3BB;
+  text-decoration: line-through;
+}
+
+.header ul li a:active {
+  color: rgba(6, 10, 36, 0.56);
+  text-decoration: line-through;
+}
+
+.header .logo {
+  float: left;
+  display: block;
+  padding: 20px 20px;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  -webkit-transition: max-height .2s ease-out;
+  transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.header .menu-icon .nav-icon {
+  background-color: #000000;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  -webkit-transition: background .2s ease-out;
+  transition: background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon::before {
+  background: #000000;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  top: 5px;
+}
+
+.header .menu-icon .nav-icon::after {
+  background: #000000;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 224px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0;
+}
+
+main #titulo {
+  position: relative;
+  padding: 0 5%;
+  padding-top: 25%;
+  z-index: 1;
+}
+
+main #titulo .title h1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #060A24;
+}
+
+main #titulo .title h1 .underline {
+  text-decoration: line-through;
+}
+
+main #titulo .title h1 .dot {
+  color: #0000EC;
+}
+
+main #titulo .title p {
+  font-family: 'IBM Plex Mono', monospace;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  color: #060A24;
+  line-height: 22px;
+}
+
+main #episodios {
+  padding: 0 5%;
+  width: 100%;
+  padding-top: 10%;
+  height: 100%;
+  -webkit-transform: skewY(6deg);
+          transform: skewY(6deg);
+}
+
+main #episodios .titulo2 h2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: white;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+main #episodios .podcast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main #episodios .podcast .iframe1 iframe, main #episodios .podcast .iframe2 iframe {
+  margin-bottom: 5%;
+  width: 100%;
+  height: 232px;
+  border: 0;
+}
+
+main #dondeVenimos {
+  padding: 0 5%;
+}
+
+main #dondeVenimos .container-img {
+  width: 100%;
+}
+
+main #dondeVenimos .container-img img {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  width: 100%;
+}
+
+main #dondeVenimos .container-img .texto {
+  color: #060A24;
+}
+
+main #dondeVenimos .container-img .texto h2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0;
+}
+
+main #dondeVenimos .container-img .texto p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: lighter;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+main #invEst {
+  padding: 20% 0;
+}
+
+main #invEst h2 {
+  color: #060A24;
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding: 0 5% 5% 5%;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0;
+}
+
+main #invEst .container-invitados {
+  font-size: 0;
+  width: 100%;
+}
+
+main #invEst .container-invitados img {
+  width: 100%;
+}
+
+main #nuestrosTemas {
+  padding: 0 5%;
+}
+
+main #nuestrosTemas h2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0;
+  padding: 10% 5% 0 0;
+  color: #060A24;
+}
+
+main #nuestrosTemas .container-temas div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 10%;
+}
+
+main #nuestrosTemas .container-temas div p {
+  padding-top: 10%;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #060A24;
+  letter-spacing: 0;
+}
+
+footer .last-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  text-align: center;
+  padding: 7rem 1rem 4rem;
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+footer .last-news .title-news h2 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: white;
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 42px;
+}
+
+footer .crIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background: white;
+  padding: 5%;
+}
+
+footer .crIcons p {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 14px;
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 22px;
+  padding-top: 5%;
+}
+
+footer .crIcons .social-media a {
+  color: black;
+  padding: 0 5%;
+}
+
+.fondo {
+  padding: 5%;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  -webkit-transform: skewY(-6deg);
+          transform: skewY(-6deg);
+  padding-bottom: 25%;
+  z-index: -1;
+}
+
+.btnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.btnContainer .button {
+  background-color: #00F3BB;
+  border: none;
+  color: #060A24;
+  font-family: 'IBMPlexMono-Medium', monospace;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 22px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+}
+
+.btnContainer .button:hover {
+  color: white;
+  background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+}
+
+@media (min-width: 768px) {
+  main #titulo .btnContainer {
+    all: unset;
+  }
+  main #titulo .btnContainer .button {
+    width: 40%;
+  }
+  main .fondo {
+    padding-bottom: 10%;
+  }
+  main .fondo #episodios {
+    padding-top: 5%;
+  }
+  main .fondo #episodios .titulo2 h2 {
+    font-weight: 400;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 40px;
+    padding: 0 0 10px 5%;
+  }
+  main .fondo #episodios .podcast {
+    all: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main .fondo #episodios .podcast .iframe1 iframe {
+    width: 90%;
+    float: left;
+  }
+  main .fondo #episodios .podcast .iframe2 iframe {
+    width: 90%;
+    float: right;
+  }
+  main #dondeVenimos {
+    padding: 0 5%;
+  }
+  main #dondeVenimos .container-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    height: 100%;
+  }
+  main #dondeVenimos .container-img img {
+    width: 35%;
+  }
+  main #dondeVenimos .container-img .texto {
+    width: 35%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  main #dondeVenimos .container-img .texto h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+  }
+  main #dondeVenimos .container-img .texto p {
+    font-weight: lighter;
+    font-size: 16px;
+  }
+  main #invEst {
+    all: unset;
+  }
+  main #invEst h2 {
+    all: unset;
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 0 10%;
+    font-size: 48px;
+    font-weight: 400;
+  }
+  main #invEst .container-invitados {
+    padding-top: 30px;
+    font-size: 0;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main #invEst .container-invitados img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 33.33%;
+    height: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  main #nuestrosTemas {
+    width: 100%;
+    padding: 0 10%;
+  }
+  main #nuestrosTemas h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+  }
+  main #nuestrosTemas .container-temas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main #nuestrosTemas .container-temas div {
+    all: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 5%;
+  }
+  main #nuestrosTemas .container-temas div p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  footer .last-news {
+    padding: 10% 0;
+  }
+  footer .last-news .btnContainer {
+    all: unset;
+  }
+  footer .last-news .btnContainer .button {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1220px) {
+  .header {
+    padding-left: 5%;
+  }
+  .header ul {
+    padding-right: 5%;
+  }
+  .header ul li {
+    float: left;
+  }
+  .header ul li a {
+    padding: 20px 30px;
+    color: #000000;
+  }
+  .header ul li a:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+  }
+  .header ul li a:active {
+    color: rgba(6, 10, 36, 0.56);
+    text-decoration: line-through;
+  }
+  .header .menu {
+    background-color: #ffffff;
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  main #titulo {
+    padding: 15% 5% 3% 14%;
+  }
+  main #titulo .title {
+    width: 100%;
+  }
+  main #titulo .title h1 {
+    font-weight: bold;
+    font-size: 64px;
+    font-weight: 400;
+    color: #060A24;
+  }
+  main #titulo .title p {
+    width: 50%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  main #titulo .btnContainer {
+    all: unset;
+  }
+  main #titulo .btnContainer .button {
+    width: 20%;
+  }
+  main .fondo {
+    padding-bottom: 5%;
+  }
+  main .fondo #episodios {
+    padding-top: 5%;
+  }
+  main .fondo #episodios .titulo2 h2 {
+    font-weight: 400;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 40px;
+    padding: 0 0 10px 5%;
+  }
+  main .fondo #episodios .podcast {
+    all: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main .fondo #episodios .podcast .iframe1 iframe {
+    width: 90%;
+    float: left;
+  }
+  main .fondo #episodios .podcast .iframe2 iframe {
+    width: 90%;
+    float: right;
+  }
+  main #dondeVenimos {
+    padding: 0 5%;
+  }
+  main #dondeVenimos .container-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    height: 100%;
+  }
+  main #dondeVenimos .container-img img {
+    width: 35%;
+  }
+  main #dondeVenimos .container-img .texto {
+    width: 35%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  main #dondeVenimos .container-img .texto h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+  }
+  main #dondeVenimos .container-img .texto p {
+    font-weight: lighter;
+    font-size: 16px;
+  }
+  main #invEst {
+    all: unset;
+  }
+  main #invEst h2 {
+    all: unset;
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 0 10%;
+    font-size: 48px;
+    font-weight: 400;
+  }
+  main #invEst .container-invitados {
+    padding-top: 30px;
+    font-size: 0;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main #invEst .container-invitados img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 33.33%;
+    height: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  main #nuestrosTemas {
+    width: 100%;
+    padding: 5% 10%;
+  }
+  main #nuestrosTemas h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+  }
+  main #nuestrosTemas .container-temas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main #nuestrosTemas .container-temas div {
+    all: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 5%;
+  }
+  main #nuestrosTemas .container-temas div p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  footer .last-news {
+    padding: 10% 0;
+  }
+  footer .last-news .btnContainer {
+    all: unset;
+  }
+  footer .last-news .btnContainer .button {
+    width: 60%;
+  }
+  footer .crIcons {
+    all: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1% 5%;
+  }
+  footer .crIcons p {
+    all: unset;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-size: 14px;
+  }
+  footer .crIcons .social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .crIcons .social-media a {
+    color: black;
+    padding-left: 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
