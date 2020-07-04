@@ -448,6 +448,7 @@ footer .crIcons .social-media a {
   }
   main #dondeVenimos .container-img img {
     width: 35%;
+    height: 35%;
   }
   main #dondeVenimos .container-img .texto {
     width: 35%;
@@ -461,8 +462,8 @@ footer .crIcons .social-media a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    -webkit-transform: translateY(-55px);
+            transform: translateY(-55px);
   }
   main #dondeVenimos .container-img .texto h2 {
     font-family: 'IBM Plex Sans', sans-serif;
