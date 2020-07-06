@@ -147,7 +147,7 @@ main #titulo .title h1 .underline {
 }
 
 main #titulo .title h1 .dot {
-  color: #0000EC;
+  color: #060A24;
 }
 
 main #titulo .title p {
@@ -158,6 +158,10 @@ main #titulo .title p {
   font-size: 14px;
   color: #060A24;
   line-height: 22px;
+}
+
+main #titulo .title p .newText {
+  display: none;
 }
 
 main #episodios {
@@ -595,10 +599,16 @@ footer .crIcons .social-media a {
     font-weight: 400;
     color: #060A24;
   }
+  main #titulo .title h1 .dot {
+    color: #0000EC;
+  }
   main #titulo .title p {
     width: 50%;
     font-size: 16px;
     line-height: 24px;
+  }
+  main #titulo .title p .newText {
+    all: unset;
   }
   main #titulo .btnContainer {
     all: unset;
