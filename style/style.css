@@ -352,7 +352,7 @@ footer .crIcons p {
   padding-top: 5%;
 }
 
-footer .crIcons .social-media a {
+footer .crIcons .social-media i {
   color: black;
   padding: 0 5%;
 }
@@ -793,7 +793,7 @@ footer .crIcons .social-media a {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  footer .crIcons .social-media a {
+  footer .crIcons .social-media i {
     color: black;
     padding-left: 30px;
   }
